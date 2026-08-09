@@ -155,7 +155,7 @@ class AdaptiveImageLoader:
             request_headers = {**self.DEFAULT_HEADERS, **(headers or {})}
 
             # Create temp file and stream download
-            with tempfile.NamedTemporaryFile(delete=False, suffix='.jpg') as tmp:
+            with tempfile.NamedTemporaryFile(delete=False, suffix='.jpg', dir='/home/inky/InkyPiEs/tmp') as tmp:
                 tmp_path = tmp.name
 
                 session = get_http_session()
